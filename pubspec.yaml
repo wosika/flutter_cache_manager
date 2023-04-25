@@ -1,5 +1,5 @@
 name: cache_manager
-description: 本地存储管理者
+description: local cache manager
 version: 0.0.1
 homepage:
 
