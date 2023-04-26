@@ -13,4 +13,29 @@ abstract class ICache {
 
   //设置string集合
   List<String> getStringList(String key, {List<String> defaultValue});
+
+  //设置int
+  void putInt(String key, int value);
+
+  //获取int
+  int getInt(String key, {int defaultValue = 0});
+
+
+  //设置double
+  void putDouble(String key, double value);
+
+  //获取double
+  double getDouble(String key, {double defaultValue = 0.0});
+
+  //设置bool
+  void putBool(String key, bool value);
+
+  //获取bool
+  bool getBool(String key, {bool defaultValue = false});
+
+  //移除
+  void remove(String key);
+
+  //清空
+  void clear();
 }

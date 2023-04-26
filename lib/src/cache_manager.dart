@@ -48,4 +48,44 @@ class CacheManager extends ICache {
   void putStringList(String key, List<String> value) {
     _cache.putStringList(key, value);
   }
+
+  @override
+  void clear() {
+    _cache.clear();
+  }
+
+  @override
+  bool getBool(String key, {bool defaultValue = false}) {
+    return _cache.getBool(key, defaultValue: defaultValue);
+  }
+
+  @override
+  double getDouble(String key, {double defaultValue = 0.0}) {
+    return _cache.getDouble(key, defaultValue: defaultValue);
+  }
+
+  @override
+  int getInt(String key, {int defaultValue = 0}) {
+    return _cache.getInt(key, defaultValue: defaultValue);
+  }
+
+  @override
+  void putBool(String key, bool value) {
+    _cache.putBool(key, value);
+  }
+
+  @override
+  void putDouble(String key, double value) {
+      _cache.putDouble(key, value);
+  }
+
+  @override
+  void putInt(String key, int value) {
+    _cache.putInt(key, value);
+  }
+
+  @override
+  void remove(String key) {
+    _cache.remove(key);
+  }
 }
