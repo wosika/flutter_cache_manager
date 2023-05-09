@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'i_cache.dart';
 
@@ -16,6 +19,7 @@ class HiveCache extends ICache {
 
   @override
   Future<void> init({ICache? cache}) async {
+    await Hive.initFlutter();
     box = await Hive.openBox(name);
   }
 
