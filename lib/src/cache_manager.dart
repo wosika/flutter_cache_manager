@@ -90,5 +90,11 @@ class CacheManager extends ICache {
   }
 
   @override
+  Future<void> refresh() async {
+    return await _cache.refresh();
+  }
+
+
+  @override
   String get name => _cache.name;
 }

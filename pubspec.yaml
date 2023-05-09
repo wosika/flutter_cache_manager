@@ -1,6 +1,6 @@
 name: cache_manager
 description: local cache manager
-version: 0.0.3
+version: 0.0.5
 homepage:
 
 environment:
