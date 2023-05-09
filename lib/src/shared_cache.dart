@@ -2,6 +2,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'i_cache.dart';
 
 class SharedCache extends ICache {
+  @override
+  String get name => "Flutter";
+
   late SharedPreferences sharedPreferences;
 
   @override
@@ -75,6 +78,11 @@ class SharedCache extends ICache {
   }
 
   @override
+  Future<void> refresh() async {
+    await sharedPreferences.reload();
+  }
 
-  String get name => "Flutter";
+
+
+
 }

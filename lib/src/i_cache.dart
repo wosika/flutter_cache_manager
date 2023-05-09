@@ -23,7 +23,6 @@ abstract class ICache {
   //获取int
   int getInt(String key, {int defaultValue = 0});
 
-
   //设置double
   void putDouble(String key, double value);
 
@@ -41,4 +40,8 @@ abstract class ICache {
 
   //清空
   void clear();
+
+  //重启
+
+  Future<void> refresh() async {}
 }

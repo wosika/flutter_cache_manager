@@ -1,12 +1,7 @@
-import 'dart:io';
-
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import 'i_cache.dart';
 
 class HiveCache extends ICache {
-
   @override
   String get name => "Flutter";
 
@@ -82,6 +77,8 @@ class HiveCache extends ICache {
     box.delete(key);
   }
 
-
-
+  @override
+  Future<void> refresh() async {
+    await box.flush();
+  }
 }
