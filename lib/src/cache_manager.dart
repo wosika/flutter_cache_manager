@@ -1,5 +1,4 @@
-import 'package:cache_manager/src/shared_cache.dart';
-
+import 'package:cache_manager/src/hive_cache.dart';
 import 'i_cache.dart';
 
 class CacheManager extends ICache {
@@ -30,7 +29,7 @@ class CacheManager extends ICache {
   //初始化要在runApp()之前
   @override
   Future<void> init({ICache? cache}) async {
-    _cache = cache ?? SharedCache();
+    _cache = cache ?? HiveCache();
     await _cache.init();
   }
 
@@ -76,7 +75,7 @@ class CacheManager extends ICache {
 
   @override
   void putDouble(String key, double value) {
-      _cache.putDouble(key, value);
+    _cache.putDouble(key, value);
   }
 
   @override
@@ -88,4 +87,7 @@ class CacheManager extends ICache {
   void remove(String key) {
     _cache.remove(key);
   }
+
+  @override
+  String get name => _cache.name;
 }

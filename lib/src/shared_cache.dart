@@ -11,6 +11,7 @@ class SharedCache extends ICache {
 
   @override
   Future<void> init({ICache? cache}) async {
+    SharedPreferences.setPrefix(name);
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
@@ -72,4 +73,8 @@ class SharedCache extends ICache {
   void remove(String key) {
     sharedPreferences.remove(key);
   }
+
+  @override
+
+  String get name => "Flutter";
 }

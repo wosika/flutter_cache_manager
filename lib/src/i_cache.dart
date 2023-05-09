@@ -1,4 +1,7 @@
 abstract class ICache {
+  //初始化名称
+  String get name;
+
   //初始化
   Future<void> init({ICache? cache});
 
