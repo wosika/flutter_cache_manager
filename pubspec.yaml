@@ -1,6 +1,6 @@
 name: cache_manager
 description: local cache manager
-version: 0.0.5
+version: 0.0.6
 homepage:
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  shared_preferences: 2.1.0
+  shared_preferences: ^2.1.1
 
   hive: 3.0.0-dev
   hive_flutter: 2.0.0-dev
